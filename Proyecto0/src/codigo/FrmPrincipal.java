@@ -386,6 +386,16 @@ public class FrmPrincipal extends javax.swing.JFrame {
         }else{
             txtAnalizarSin.setText("Código Correcto");
         }
+        
+        String a= txtResultado.getText();
+        
+        if(!a.toLowerCase().contains("robot_r")) {
+        	
+        	txtAnalizarSin.setText("Código Incorrecto");
+        }
+        if(!a.toLowerCase().contains("vars")||!a.toLowerCase().contains("procs")) {
+        	txtAnalizarSin.setText("Código Incorrecto");
+        }
     }
 
     
